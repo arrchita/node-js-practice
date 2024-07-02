@@ -46,7 +46,7 @@ MongoClient.connect(url)
   })
 
 //Create a middleware for specifying the address of the folder with the static content
-app.use(express.static('public'));
+app.use(express.static("public"));
 
 
 //Creating a route for the homepage
@@ -120,7 +120,7 @@ app.get('/success', function (req, res) {
     //res.end();
   }//end of if
   else{
-    res.redirect("index1.html");
+    res.redirect("/index1.html");
   }//end of else
 });//end of route
 
@@ -128,7 +128,7 @@ app.get('/success', function (req, res) {
 app.get("/logout", (req, res) => {
   // Destroy the session and redirect to the login page
   req.session.destroy(() => {
-  res.redirect("index1.html");
+  res.redirect("/index1.html");
   });
 });
 
@@ -158,6 +158,17 @@ app.use((err, req, res, next) => {
     console.error(err.stack); // Log the error stack trace
     res.status(500).send(err.message); // Send a 500 error response
   });
+
+
+app.get("/test", (req, res) => {
+    res.send("Server is working!");
+});
+
+app.use((req, res, next) => {
+    console.log(`Request URL: ${req.url}`);
+    next();
+});
+
 
 //Create the server running on port number defined in the variable port in the beggining
 app.listen(port, () => {
