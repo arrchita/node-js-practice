@@ -1,4 +1,8 @@
-body{
+.center {
+    text-align: center;
+  }
+
+/* body{
     color:red;
     font-weight: bold;
-}
+} */
