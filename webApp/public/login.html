@@ -1,0 +1,45 @@
+<html>
+<head>
+   <title>Login Here</title>
+   <style>
+      h1 {
+         text-align: center; /* Center the heading */
+      }
+      table {
+         margin: 0 auto; /* Center the table */
+         border-spacing: 10px; /* Add spacing between table cells */
+      }
+      td {
+         padding: 5px; /* Add padding for a clean layout */
+      }
+      .center {
+         text-align: center; /* Center content within table cells */
+      }
+   </style>
+</head>
+<body>
+   <h1>Login Here</h1>
+   <table>
+      <form action="/login" method="post">
+         <tr>
+            <td>Email:</td>
+            <td><input type="text" name="username"></td>
+         </tr>
+         <tr>
+            <td>Password:</td>
+            <td><input type="password" name="pwd"></td>
+         </tr>
+         <tr>
+            <td colspan="2" class="center">
+               <input type="submit" value="Submit">
+            </td>
+         </tr>
+      </form>
+      <tr>
+         <td colspan="2" class="center">
+            New User? Click <a href="index1.html">here</a> to register
+         </td>
+      </tr>
+   </table>
+</body>
+</html>
